@@ -333,14 +333,3 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 .notification.success { background: #28a745; }   /* green */
 .notification.error   { background: #dc3545; }   /* red */
 .notification.info    { background: #007bff; }   /* blue */
-
-/* ===== ROUND RESULT IMAGES ===== */
-.result-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-
-
