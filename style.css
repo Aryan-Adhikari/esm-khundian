@@ -151,7 +151,7 @@ footer {
   max-width: 220px;
   height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 50%;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
@@ -333,3 +333,4 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 .notification.success { background: #28a745; }   /* green */
 .notification.error   { background: #dc3545; }   /* red */
 .notification.info    { background: #007bff; }   /* blue */
+
