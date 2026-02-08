@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY BACKGROUND ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  color: #fff;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+}
+
+header p {
+  opacity: 0.9;
+}
+.main-header {
+  padding: 25px 15px;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.header-content h1 {
+  font-size: 2.3rem;
+}
+
+.header-content p {
+  opacity: 0.9;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: transparent;
+  text-align: center;
+  padding: 14px;
+}
+nav a.active {
+  color: orange;
+  text-shadow: 0 0 8px rgba(244,208,63,0.8);
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* ===== JOIN SECTION ===== */
+.join-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.join-section h2 {
+  font-size: 2.6rem;
+}
+
+#typing-text {
+  color: red;
+  font-weight: 700;
+  border-right: 3px solid #f4d03f;
+  padding-right: 6px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: red; }
+}
+
+/* ===== CONTENT SECTION ===== */
+section {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 25px;
+  background: transparent;
+  color: #e0e0e0;
+  border-radius: 10px;
+}
+
+section h2 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  margin-top: 30px;
+}
+
+/* ===== RESULTS GRID ===== */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-card img {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.result-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: white;
+}
+.contact {
+  text-align: center;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 8px 0 20px;
+  color: #ADD8E6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.contact-link:hover {
+  color: #005f73;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .join-section h2 {
+    font-size: 2rem;
+  }
+  .logo {
+    width: 65px;
+    height: 65px;
+  }
+.results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ===== SOCIAL MEDIA ROW ===== */
+.social-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-section p {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+   text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  text-decoration: none;
+  color: white;
+  padding: 40px 25px;
+  border-radius: 18px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.course-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+
+.course-card h3,
+.course-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.course-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.course-card p {
+  opacity: 0.9;
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* DIFFERENT BACKGROUNDS */
+.ssc { background: url("images/ssc.jpg") center/cover; }
+.neet { background: url("images/neet.jpg") center/cover; }
+.jee { background: url("images/jee.jpg") center/cover; }
+.army { background: url("images/army.jpg") center/cover; }
+.police { background: url("images/police.jpg") center/cover; }
+.school { background: url("images/school.jpg") center/cover; }
+
+.course-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== NOTIFICATIONS ===== */
+.notification-container {
+  position: fixed;        /* stays on top while scrolling */
+  top: 80px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  opacity: 0.95;
+  backdrop-filter: blur(4px);
+}
+
+/* Notification Types */
+.notification.success { background: #28a745; }   /* green */
+.notification.error   { background: #dc3545; }   /* red */
+.notification.info    { background: #007bff; }   /* blue */
+

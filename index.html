@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex Serviceman Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-content">
+    <img src="images/logo.jpg" alt="ESM Academy Logo" class="logo">
+    <div>
+      <h1>ESM Academy</h1>
+    <p>Offline coaching for Government Exams & Classes 6th–12th</p>
+    </div>
+  </div>
+</header>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="result.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="join-section">
+    <h2>
+      Join for <span id="typing-text"></span>
+    </h2>
+  </section>
+  <section>
+    <h2>Why Choose ESM?</h2>
+    <ul>
+      <li>Excellent faculty</li>
+      <li>Focused SSC, Army, NDA & NEET coaching</li>
+      <li>Discipline + Results</li>
+      <li>Affordable fees</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 Ex Serviceman Academy, Khundian</p>
+  </footer>
+
+  <script>
+    const words = ["SSC", "NEET", "ARMY", "NDA", "POLICE", "JEE", "BOARDS"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const speed = 120;
+    const textElement = document.getElementById("typing-text");
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+
+      if (!isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentWord.length) {
+          setTimeout(() => isDeleting = true, 800);
+        }
+      } else {
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+      setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
