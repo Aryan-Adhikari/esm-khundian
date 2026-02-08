@@ -163,6 +163,7 @@ footer {
 
 /* Card */
 .result-card {
+  text-align: center;
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 18px;
@@ -188,7 +189,6 @@ footer {
 /* Name / Rank Text */
 .result-card p {
   margin-top: 15px;
-  justify-items: center;
   font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
@@ -375,6 +375,7 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 .notification.success { background: #28a745; }   /* green */
 .notification.error   { background: #dc3545; }   /* red */
 .notification.info    { background: #007bff; }   /* blue */
+
 
 
 
